@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function init(){
+            //create textbox
+            let txtElement=document.createElement("input");
+            txtElement.setAttribute("type","text");
+            txtElement.setAttribute("id","username");
+            txtElement.setAttribute("placeholder"," Enter Username");
+            //create button
+            let btnElement=document.createElement("input");
+            btnElement.setAttribute("type","button");
+            btnElement.value = "Log In";
+            btnElement.onclick = function(){
+                txtElement.setAttribute("value","Login Successful");
+            }
+
+            document.body.appendChild(txtElement);
+            document.body.appendChild(btnElement);
+        }
+        window.onload=init;
+    </script>
+</head>
+<body onload="init()">
+
+</body>
+</html>

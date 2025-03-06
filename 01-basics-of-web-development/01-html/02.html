@@ -5,11 +5,23 @@
     <title>Form Controls</title>
 </head>
 <body>
-<fieldset>
-    <legend>Contact info</legend>
-    <label id="name">Name</label><input type="text" name="name" placeholder="Enter your name" required/>
-    <input type="email" name="email" placeholder="Enter your email" required/>
+<table border="border: 2px dotted deeppink; width:10%">
+    <tr>
+        <td><label id="name">Name</label></td>
+        <td><input type="text" name="name" placeholder="Enter your name" required/></td>
+    </tr>
 
-</fieldset>
+    <tr>
+        <td><label id="age">Age</label></td>
+        <td> <input id="age1" type="number" placeholder="Age" min="1" max="30"></td>
+    </tr>
+    <tr>
+       <td colspan="2" align="center"><input type="submit">
+           </td>
+
+
+    </tr>
+</table>
+
 </body>
 </html>

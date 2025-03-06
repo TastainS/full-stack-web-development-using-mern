@@ -25,7 +25,53 @@
 
 </table>
 
+<label id="password1">Password</label>
+<input id="password" type="password" placeholder="Password">
+
+<label id="emailid1">EmailId</label>
+<input id="emailid" type="email" placeholder="EmailId">
+
+<label id="age1">Age</label>
+<input id="age" type="number" placeholder="Age" min="18" max="30">
+
+<label id="dob1">Date of Birth</label>
+<input id="dob" type="date" placeholder="Date of Birth">
+
+<p id="gender1">Gender</p>
+<label><input type="radio" name="gender" value="female">Female</label>
+<label><input type="radio" name="gender" value="male">Male</label><br>
 
 
+<label>
+    <input type="checkbox" name="subscribe" value="yes">
+    Subscribe to newsletter
+</label>
+
+<label>Country</label>
+<select id="country">
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">USA</option>
+
+</select>
+<br><label for="message">Message</label>
+<textarea id="message" rows="3" cols="4"></textarea>
+
+<br>
+<label for="volume">Volume</label>
+<input id="volume" type="range" min="0" max="100" value="50">
+<br>
+<label for="file">Upload file</label>
+<input id="file" type="file">
+<br>
+<label for="search">Search</label>
+<input id="search" type="search">
+<br>
+<label for="favcolor">Choose a color</label>
+<input type="color" id="favcolor">
+<br>
+<label id="submit">Submit</label>
+<label id="reset">Reset</label>
+<button type="button" onclick="alert('Button clicked!')">Click Me!</button>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script type="text/javascript">
+    let registeredEmails = [];
+
+    function init(){
+      document.getElementById("userInfo").style.display = "none";
+      document.getElementById("subscribe").style.display = "none";
+    }
+
+    function displayLogin(){
+      document.getElementById("userInfo").style.display = "block";
+      document.getElementById("subscribe").style.display = "none";
+    }
+
+    function displaySubscribe(){
+      document.getElementById("userInfo").style.display = "none";
+      document.getElementById("subscribe").style.display = "block";
+    }
+
+    function subscribe(){
+      let email=document.getElementById("emailInput").value;
+      if (email && !registeredEmails.includes(email)) {
+        registeredEmails.push(email);
+        alert("Subscribed successfully!");
+      } else {
+        alert("Email is already registered");
+      }
+    }
+
+    function logIn(){
+      let email = document.getElementById("loginInput").value;
+      if (registeredEmails.includes(email)) {
+        alert("Registered user");
+      } else {
+        alert("Email not found");
+      }
+    }
+
+    window.onload = init;
+  </script>
+</head>
+<body>
+<input type="button" value="Display login" onclick="displayLogin()"/>
+<input type="button" value="Display signup" onclick="displaySubscribe()"/>
+
+<fieldset id="userInfo">
+  <legend>Login</legend>
+  <label>Email:</label>
+  <input type="text" id="loginInput" placeholder="Enter Email"/>
+  <input type="button" value="Login" onclick="logIn()"/>
+</fieldset>
+
+<div id="subscribe">
+  <input type="text" id="emailInput" placeholder="Enter Email"/>
+  <input type="button" value="Subscribe" onclick="subscribe()"/>
+</div>
+</body>
+</html>
